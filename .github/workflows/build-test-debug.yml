@@ -13,7 +13,7 @@ jobs:
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'DeltaV-Bot' && github.actor != 'SimpleStation14'
     strategy:
       matrix:
-        os: [arc-runner-set ubuntu-latest]
+        os: [arc-runner-set ubuntu-latest] #TODO: easy way for forks to switch between self hosted runners and github ones? idk
 
     runs-on: ${{ matrix.os }}
 
