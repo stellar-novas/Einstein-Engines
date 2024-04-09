@@ -13,7 +13,7 @@ jobs:
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'DeltaV-Bot' && github.actor != 'SimpleStation14'
     strategy:
       matrix:
-        os: [arc-runner-set]
+        os: [arc-runner-set ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
