@@ -10,6 +10,8 @@ jobs:
   benchmark:
     name: Run Benchmarks
     runs-on: arc-runner-set
+    env:
+      DOTNET_INSTALL_DIR: "/home/runner/_work/_actions"
     steps:
     - uses: actions/checkout@v3.6.0
       with:

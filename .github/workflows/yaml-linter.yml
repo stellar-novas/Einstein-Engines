@@ -12,6 +12,8 @@ jobs:
     name: YAML Linter
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'DeltaV-Bot' && github.actor != 'SimpleStation14'
     runs-on: arc-runner-set
+    env:
+      DOTNET_INSTALL_DIR: "/home/runner/_work/_actions"
     steps:
       - uses: actions/checkout@v3.6.0
       - name: Setup submodule
@@ -24,7 +26,7 @@ jobs:
           cd RobustToolbox/
           git submodule update --init --recursive
       - name: Setup .NET Core
-        uses: jasoncouture/setup-dotnet@v4.0.1
+        uses: actions/setup-dotnet@v3.2.0
         with:
           dotnet-version: 8.0.x
       - name: Install dependencies

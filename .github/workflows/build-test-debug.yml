@@ -34,7 +34,7 @@ jobs:
         git submodule update --init --recursive
 
     - name: Setup .NET Core
-      uses: jasoncouture/setup-dotnet@v4.0.1
+      uses: actions/setup-dotnet@v3.2.0
       with:
         dotnet-version: 8.0.x
 
@@ -57,6 +57,8 @@ jobs:
     needs:
       - build
     runs-on: arc-runner-set
+    env:
+      DOTNET_INSTALL_DIR: "/home/runner/_work/_actions"
     steps:
       - name: CI succeeded
         run: exit 0
