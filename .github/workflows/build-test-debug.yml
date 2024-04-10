@@ -17,7 +17,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     env:
-        DOTNET_INSTALL_DIR="/home/runner/_work/_tool/dotnet"
+        DOTNET_INSTALL_DIR: /home/runner/_work/_tool/dotnet
 
     steps:
     - name: Checkout Master
