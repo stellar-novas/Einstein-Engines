@@ -16,6 +16,8 @@ jobs:
         os: [arc-runner-set] #TODO: easy way for forks to switch between self hosted runners and github ones? idk
 
     runs-on: ${{ matrix.os }}
+    env:
+        DOTNET_INSTALL_DIR="/home/runner/_work/_tool/dotnet"
 
     steps:
     - name: Checkout Master
