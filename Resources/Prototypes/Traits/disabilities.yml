@@ -12,6 +12,19 @@
     - type: PermanentBlindness
 
 - type: trait
+  id: Nearsighted
+  category: Visual
+  points: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+  components:
+    - type: Nearsighted
+
+- type: trait
   id: Narcolepsy
   category: Mental
   points: 1
